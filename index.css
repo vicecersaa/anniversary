@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    
+    
+
+    background-color: pink;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    
+
+    width: 350px;
+    height: 300px;
+
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: whitesmoke;
+
+    animation: bounce;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+
+  }
+
+  .box h1 {
+    font-family: 'Courgette', cursive;
+    margin-bottom: 10px;
+    font-size: 40px;
+
+  }
+
+  .box p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+  }
+
+
+  .content {
+    
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    text-align: center;
+    position: absolute;
+    left: -300%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content.show {
+    animation: fade-in 0.5s ease-in-out forwards;
+    left: 5%;
+    margin-inline: auto;
+  }
+
+  .content h2 {
+    font-size: 50px;
+    font-family: 'Courgette', cursive;
+  }
+
+  .content p {
+    width: 60%;
+    margin-inline: auto;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'PT Sans', sans-serif;
+  }
+
+  .gambar-gambar {
+    width: 50%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+   
+  }
+
+  .gambar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+  }
+
+  .gambar img {
+    width: 250px;
+    height: 250px;
+    
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    .box {
+        display: flex;
+        align-items: center;
+
+        width: 200px;
+        height: 200px;
+    }
+
+    .box h1 {
+        font-size: 25px;
+    }
+
+    .box p {
+        font-size: 16px;
+    }
+
+    .content.show {
+        display: flex;
+        width: 300px;
+        left: 15%;
+        
+    }
+
+    .content h2 {
+        font-size: 30px;
+    }
+
+    .content p {
+        font-size: 16px;
+        width: 250px;
+    }
+
+    .gambar-gambar {
+        width: 300px;
+    }
+
+    .gambar img {
+        width: 125px;
+        height: 125px;
+    }
+  }
+
+
+  

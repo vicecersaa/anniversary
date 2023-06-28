@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Happy Anniversary </title>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="playSong(this)">
+          <h1>A Letter For You</h1>
+          <p>Dear Magnanda Alfatta Lufti</p>
+        </div>
+        <div class="content" id="content">
+          <h2>Happy Anniversary</h2>
+          <p>Happy anniversary, bebi!! Promise to always put in every effort required so that we always stay together. Miss you, Love you ❤️</p>
+            <div class="gambar-gambar">
+          <div class="gambar">
+            <img src="/songs/grace1.jpg" alt="">
+          </div>
+          <div class="gambar">
+            <img src="/songs/grace2.jpg" alt="">
+          </div>
+        </div>
+        </div>
+      </div>
+    
+      <script>
+        function playSong(box) {
+          var audio = new Audio('/songs/bettertogether.mp3');
+          audio.play();
+          
+          var content = document.querySelector('.content');
+          
+          box.style.display = 'none';
+          content.classList.add('show');
+        }
+        
+        var h1 = document.querySelector('.box h1');
+        var p = document.querySelector('.box p');
+        
+        h1.addEventListener('click', function() {
+          playSong(this.parentNode);
+        });
+        
+        p.addEventListener('click', function() {
+          playSong(this.parentNode);
+        });
+      </script>
+
+</body>
+</html>
